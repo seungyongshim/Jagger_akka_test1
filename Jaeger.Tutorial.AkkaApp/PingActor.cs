@@ -19,9 +19,7 @@ namespace Jaeger.Tutorial.AkkaApp
             Receive<string>(str =>
             {
                 Console.WriteLine($"{str} ");
-                IActorRef sender = Sender;
-                Thread.Sleep(10);
-                Sender.Tell("Hello");
+                // let the request-response operation terminate here
             });
         }
     }
