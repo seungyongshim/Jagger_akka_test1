@@ -17,13 +17,13 @@ namespace Jaeger.Tutorial.AkkaApp
 
 
             pinger.Tell(ponger);
-            /*
+            
             system
                 .Scheduler
-                .ScheduleTellOnce(TimeSpan.FromSeconds(0),
-                //TimeSpan.FromSeconds(1),
+                .ScheduleTellRepeatedly(TimeSpan.FromSeconds(0),
+                TimeSpan.FromSeconds(1),
                 pinger, ponger, ActorRefs.NoSender);
-            */
+            
 
             Console.ReadLine();
         }
